@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Center";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Center</h2>
+
+<div id="selection">
+    <input type="button" value="Doctors Entry" class="btn btn-default btn-lg col-md-4 col-xs-12" onclick=" location.href='@Url.Action("Index", "Doctor")' " />
+    @*<input type="button" value="Patient Entry" class="btn btn-default btn-lg col-md-4 col-xs-12" onclick=" location.href='@Url.Action("Index", "Patients")' " />*@
+    @* <input type="button" value="Medicine Stock Report<" class="btn btn-default btn-lg col-md-4 col-xs-12" onclick=" location.href='@Url.Action("Index", "Reports")' " />*@
+
+
+    @*<button type="button" class="btn btn-default btn-lg col-md-4 col-xs-12" id="patientEntry">Patient Entry</button>
+        <button type="button" class="btn btn-default btn-lg col-md-4 col-xs-12" id="medicineStockReport">Medicine Stock Report</button>*@
+
+</div>
+
+@*@section scripts
+    {
+        <script>
+        $("#DoctorEntryForm").hide();
+        $("#doctorEntry").click(function () {
+            $("#DoctorEntryForm").toggle();
+            $("#PatientEntryForm").hide();
+        });
+
+        $("#PatientEntryForm").hide();
+        $("#patientEntry").click(function () {
+            $("#PatientEntryForm").toggle();
+            $("#DoctorEntryForm").hide();
+        });
+
+
+        $("#submitButtonD").click(function () {
+
+            var name = $("#nameInputTextBoxx").val();
+            var degree = $("#degreeInputTextBoxx").val();
+            var spatiality = $("#specializationInputTextBoxx").val();
+            var doctorData = "name=" + name + "&degree=" + degree + "&spatiality=" + spatiality;
+            alert(doctorData);
+        });
+        var mydata = { Name: name, Degree: degree, Spatiality:spatiality};
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddDoctor", "Home")',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(mydata),
+                dataType: "json",
+                success: function (data) {
+                    //$('#myinfoTable tbody').append('<tr><td>' + name + '</td><td>' + code + '</td></tr>');
+                },
+            });
+
+    </script>
+    }*@
+
+
