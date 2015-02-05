@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CommunityMedicineBangladesh.Models;
 
 namespace WebMedicineAutoCenter.Models
 {
     public class Medicine
     {
-        public string MedicineID { get; set; }
-        public string MedicineDosage { get; set; }
-
-        public string MedicineSideEffects { get; set; }
-        public double MedicineQuantity { get; set; }
+        public int MedicineId { get; set; }
+        public string Dosage { get; set; }
+        public string SideEffects { get; set; }
+        public double Quantity { get; set; }
         public double MedicineMl { get; set; }
         public double MedicineMg { get; set; }
+
+
+
+        public virtual ICollection<CenterMedicine> CenterMedicines { get; set; }
+        public virtual ICollection<DiseaseMedicine> DiseaseMedicines { get; set; }
 
     }
 }

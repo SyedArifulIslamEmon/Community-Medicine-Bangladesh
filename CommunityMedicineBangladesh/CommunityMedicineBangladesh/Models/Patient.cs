@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebMedicineAutoCenter.Models;
 
 namespace CommunityMedicineBangladesh.Models
 {
     public class Patient
     {
-        public int PatientID { get; set; }
-        public string PatientNmae { get; set; }
-        public double PatientAge { get; set; }
-        public string PatientContactInfo { get; set; }
-        public string PatientGender { get; set; }
-        public DateTime PatientDateOfBirth { get; set; }
-        public string PatientAddress { get; set; }
-        public string PatientSocialSecurityNumber { get; set; }
+        public int PatientId { get; set; }
+        public string Nmae { get; set; }
+        public double Age { get; set; }
+        public string ContactInfo { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Address { get; set; }
+        public string SocialSecurityNumber { get; set; }
+
+
+
+        public virtual Center Center { get; set; }
+        public int CenterId { get; set; }
     }
 }

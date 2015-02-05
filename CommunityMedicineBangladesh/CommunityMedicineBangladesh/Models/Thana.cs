@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebMedicineAutoCenter.Models;
 
 namespace CommunityMedicineBangladesh.Models
 {
     public class Thana
     {
-        public int ThanaID { get; set; }
-        public string ThanaNmae { get; set; }
+        public int ThanaId { get; set; }
+        public string Nmae { get; set; }
+        public int Population { get; set; }
+
+
+
+        public virtual ICollection<Center> Centers { get; set; }
     }
 }

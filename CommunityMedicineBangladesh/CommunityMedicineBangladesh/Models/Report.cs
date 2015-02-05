@@ -7,7 +7,12 @@ namespace WebMedicineAutoCenter.Models
 {
     public class Report
     {
-        public int ReportID { get; set; }
+        public int ReportId { get; set; }
         public DateTime ReportDate { get; set; }
+
+
+
+        public virtual Center Center { get; set; }
+        public int CenterId { get; set; }
     }
 }

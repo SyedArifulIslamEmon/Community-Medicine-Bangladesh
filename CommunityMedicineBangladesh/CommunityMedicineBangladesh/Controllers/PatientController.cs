@@ -6,116 +6,117 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using CommunityMedicineBangladesh.Models;
 using WebMedicineAutoCenter.Models;
 
 namespace CommunityMedicineBangladesh.Controllers
 {
-    public class DoctorController : Controller
+    public class PatientController : Controller
     {
         private CenterGatewayDB db = new CenterGatewayDB();
 
-        // GET: /Doctor/
+        // GET: /Patient/
         public ActionResult Index()
         {
-            var doctors = db.Doctors.Include(d => d.Center);
-            return View(doctors.ToList());
+            var patients = db.Patients.Include(p => p.Center);
+            return View(patients.ToList());
         }
 
-        // GET: /Doctor/Details/5
+        // GET: /Patient/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Doctor doctor = db.Doctors.Find(id);
-            if (doctor == null)
+            Patient patient = db.Patients.Find(id);
+            if (patient == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(patient);
         }
 
-        // GET: /Doctor/Create
+        // GET: /Patient/Create
         public ActionResult Create()
         {
             ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code");
             return View();
         }
 
-        // POST: /Doctor/Create
+        // POST: /Patient/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="DoctorId,Nmae,Degree,Speciality,CenterId")] Doctor doctor)
+        public ActionResult Create([Bind(Include="PatientId,Nmae,Age,ContactInfo,Gender,DateOfBirth,Address,SocialSecurityNumber,CenterId")] Patient patient)
         {
             if (ModelState.IsValid)
             {
-                db.Doctors.Add(doctor);
+                db.Patients.Add(patient);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code", doctor.CenterId);
-            return View(doctor);
+            ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code", patient.CenterId);
+            return View(patient);
         }
 
-        // GET: /Doctor/Edit/5
+        // GET: /Patient/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Doctor doctor = db.Doctors.Find(id);
-            if (doctor == null)
+            Patient patient = db.Patients.Find(id);
+            if (patient == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code", doctor.CenterId);
-            return View(doctor);
+            ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code", patient.CenterId);
+            return View(patient);
         }
 
-        // POST: /Doctor/Edit/5
+        // POST: /Patient/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="DoctorId,Nmae,Degree,Speciality,CenterId")] Doctor doctor)
+        public ActionResult Edit([Bind(Include="PatientId,Nmae,Age,ContactInfo,Gender,DateOfBirth,Address,SocialSecurityNumber,CenterId")] Patient patient)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(doctor).State = EntityState.Modified;
+                db.Entry(patient).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code", doctor.CenterId);
-            return View(doctor);
+            ViewBag.CenterId = new SelectList(db.Centers, "CenterId", "Code", patient.CenterId);
+            return View(patient);
         }
 
-        // GET: /Doctor/Delete/5
+        // GET: /Patient/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Doctor doctor = db.Doctors.Find(id);
-            if (doctor == null)
+            Patient patient = db.Patients.Find(id);
+            if (patient == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(patient);
         }
 
-        // POST: /Doctor/Delete/5
+        // POST: /Patient/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Doctor doctor = db.Doctors.Find(id);
-            db.Doctors.Remove(doctor);
+            Patient patient = db.Patients.Find(id);
+            db.Patients.Remove(patient);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
