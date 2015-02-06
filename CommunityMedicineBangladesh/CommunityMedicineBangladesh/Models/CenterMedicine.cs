@@ -9,7 +9,8 @@ namespace CommunityMedicineBangladesh.Models
     public class CenterMedicine
     {
         public int CenterMedicineId { get; set; }
-
+        public int MedicineQuantity { get; set; }
+       
 
 
         public virtual Center Center { get; set; }

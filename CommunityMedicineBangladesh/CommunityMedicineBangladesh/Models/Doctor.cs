@@ -18,5 +18,8 @@ namespace WebMedicineAutoCenter.Models
 
         public virtual Center Center { get; set; }
         public int CenterId { get; set; }
+
+
+        public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }

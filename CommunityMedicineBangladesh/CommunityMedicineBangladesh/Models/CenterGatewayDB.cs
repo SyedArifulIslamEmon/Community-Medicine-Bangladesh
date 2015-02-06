@@ -21,7 +21,7 @@ namespace WebMedicineAutoCenter.Models
         public DbSet<Disease> Diseases { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Thana> Thanas { get; set; }
-        public DbSet<Report> Reports { get; set; }
+        public DbSet<Prescription> Prescriptions { get; set; }
 
 
     }

@@ -52,5 +52,3 @@ C:\Users\jomjoom\Documents\Visual Studio 2013\Projects\CommunityMedicineBanglade
 C:\Users\jomjoom\Documents\Visual Studio 2013\Projects\CommunityMedicineBangladesh\CommunityMedicineBangladesh\bin\System.Web.WebPages.Razor.xml
 C:\Users\jomjoom\Documents\Visual Studio 2013\Projects\CommunityMedicineBangladesh\CommunityMedicineBangladesh\obj\Debug\CommunityMedicineBangladesh.dll
 C:\Users\jomjoom\Documents\Visual Studio 2013\Projects\CommunityMedicineBangladesh\CommunityMedicineBangladesh\obj\Debug\CommunityMedicineBangladesh.pdb
-C:\Users\jomjoom\Documents\Visual Studio 2013\Projects\CommunityMedicineBangladesh\CommunityMedicineBangladesh\obj\Debug\CommunityMedicineBangladesh.Migrations.Initial.resources
-C:\Users\jomjoom\Documents\Visual Studio 2013\Projects\CommunityMedicineBangladesh\CommunityMedicineBangladesh\obj\Debug\CommunityMedicineBangladesh.csproj.GenerateResource.Cache
