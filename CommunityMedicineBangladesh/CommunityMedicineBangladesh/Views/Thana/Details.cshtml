@@ -1,0 +1,35 @@
+﻿@model CommunityMedicineBangladesh.Models.Thana
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Thana</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <p>District Name</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.District.Name)
+        </dd>
+
+        <dt>
+            <p>Thana Name</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ThanaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

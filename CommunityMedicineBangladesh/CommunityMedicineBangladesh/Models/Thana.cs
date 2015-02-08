@@ -9,11 +9,13 @@ namespace CommunityMedicineBangladesh.Models
     public class Thana
     {
         public int ThanaId { get; set; }
-        public string Nmae { get; set; }
-        public int Population { get; set; }
+        public string Name { get; set; }
+
+        public virtual District District { get; set; }
+        public int DistrictId { get; set; }
 
 
-
+     
         public virtual ICollection<Center> Centers { get; set; }
     }
 }

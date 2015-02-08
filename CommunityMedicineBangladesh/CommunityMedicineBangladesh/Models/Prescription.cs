@@ -10,7 +10,7 @@ namespace WebMedicineAutoCenter.Models
     {
         public int PrescriptionId { get; set; }
         public DateTime Date { get; set; }
-        public int VoterId { get; set; }
+        public long VoterId { get; set; }
         public string Observation { get; set; }
         public string Dose { get; set; }
         public string BeforeAfter { get; set; }

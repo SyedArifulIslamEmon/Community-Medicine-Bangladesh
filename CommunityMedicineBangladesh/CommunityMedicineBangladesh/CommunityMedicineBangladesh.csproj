@@ -175,10 +175,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CenterController.cs" />
-    <Compile Include="Controllers\DoctorController.cs" />
+    <Compile Include="Controllers\DiseaseController.cs" />
     <Compile Include="Controllers\HeadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\ThanaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -260,16 +260,16 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Head\Index.cshtml" />
     <Content Include="Views\Center\Index.cshtml" />
-    <Content Include="Views\Doctor\Create.cshtml" />
-    <Content Include="Views\Doctor\Delete.cshtml" />
-    <Content Include="Views\Doctor\Details.cshtml" />
-    <Content Include="Views\Doctor\Edit.cshtml" />
-    <Content Include="Views\Doctor\Index.cshtml" />
-    <Content Include="Views\Patient\Create.cshtml" />
-    <Content Include="Views\Patient\Delete.cshtml" />
-    <Content Include="Views\Patient\Details.cshtml" />
-    <Content Include="Views\Patient\Edit.cshtml" />
-    <Content Include="Views\Patient\Index.cshtml" />
+    <Content Include="Views\Thana\Create.cshtml" />
+    <Content Include="Views\Thana\Delete.cshtml" />
+    <Content Include="Views\Thana\Details.cshtml" />
+    <Content Include="Views\Thana\Edit.cshtml" />
+    <Content Include="Views\Thana\Index.cshtml" />
+    <Content Include="Views\Disease\Create.cshtml" />
+    <Content Include="Views\Disease\Delete.cshtml" />
+    <Content Include="Views\Disease\Details.cshtml" />
+    <Content Include="Views\Disease\Edit.cshtml" />
+    <Content Include="Views\Disease\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
